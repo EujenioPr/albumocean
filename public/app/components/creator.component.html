@@ -1,0 +1,33 @@
+<div class="body-main">
+    <div class="body-container">
+        <span class="album-creator-logo">
+            <h2>Create Album</h2>
+        </span>
+        <div class="album-creator-header">
+            <div id="alCreatorImg" class="album-creator-imager" (mouseenter)="imager=true;" (mouseleave)="imager=false;">
+                <img class="album-image" [src]="imageSrc" style="background-position: center; background-size: cover;">
+                <div class="album-creator-imager-inp">
+                    <span *ngIf="!imager && imageSrc===''">Set Album Picture</span>
+                    <label *ngIf="imager" style="background-image: url(../../images/icons/open-folder.svg);" for="alCreatorImgInput"></label>
+                    <input id="alCreatorImgInput" type="file" name="file" accept="image/*" (change)="handleInputChange($event)" #alCreatorImg>
+                </div>
+            </div>
+            <input type="text" placeholder="Title" #albumName>
+            <textarea name="albumDesc" placeholder="Description" #albumAuthor></textarea>
+
+            <div class="album-creator-body">
+                <!--<span *ngFor="let strong of strongs">-->
+                    <!--<label for="upload-input" class="label-upload">Upload Music</label>-->
+                    <!--&lt;!&ndash;<file-upload #fu (change)="fu.onChange()"></file-upload>&ndash;&gt;-->
+                    <!--<input id="upload-input" (change)="onChange()" type="file" #fileInput>-->
+                    <!--<strong *ngIf="fileName && fileSize">{{ fi.files[strong - 1].name + ', ' + fileSize + ' MB' }}</strong>-->
+                <!--</span>-->
+                 <file-input></file-input>
+            </div>
+            <span class="creator-submit">
+                <button #uploadBtn (click)="add(albumName.value, albumAuthor.value, albumImg.value); uploadFile(fileToUpload); albumName.value = ''; albumAuthor.value = ''; albumImg.value = ''">Done</button>
+            </span>
+        </div>
+
+    </div>
+</div>

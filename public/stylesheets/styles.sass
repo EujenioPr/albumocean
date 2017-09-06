@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster')
+@import url('https://fonts.googleapis.com/css?family=Roboto:400')
+@import url('https://fonts.googleapis.com/css?family=Raleway:100')
+
+$main-width: 80%
+$amount: 0.4
+
+*
+    margin: 0
+    padding: 0
+    width: 100%
+    height: 100%
+
+
+h1, h2, h3, h4, h5, p
+    padding: 0px
+    margin: 0px
+    height: auto
+
+a
+    padding: 0
+    margin: 0
+    text-decoration: none
+    color: inherit
+
+.header
+    background-color: #bdbdbd
+    //background-image: url('../images/dark_waves.png')
+    background-image: url('../images/the_concert.jpg')
+    background-position: 0 -400px
+    //background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    background-blend-mode: multiply
+    height: 250px
+    width: 100%
+    overflow: hidden
+
+    @media only screen and (max-width: 940px)
+        background-position: 0 -200px
+
+.header-pic
+    background-color: black
+    opacity: 0
+
+
+.title
+    height: auto
+    width: 80%
+    position: absolute
+    top: 100px
+    left: 50%
+    margin-left: -40%
+    padding: 0px
+    h1
+        font-size: 33px
+        color: #e0e0e0
+        font-family: 'Raleway'
+
+
+.body
+    // background-color: rgba(248, 248, 248, 0.42)
+    background-color: #f0f0e9
+    height: auto
+    min-height: 100%
+    width: 100%
+    margin-top: 40px
+
+
+.navbar
+    width: 100%
+    height: 40px
+    position: fixed
+    background-color: transparentize(#121212, 0.8)
+    z-index: 2
+
+    span
+        color: #f0f0f0
+        font-family: 'Lobster'
+        font-size: 19px
+        width: 95px
+        height: 25px
+        float: left
+        line-height: 40px
+
+    strong
+        color: #f0f0f0
+        font-family: 'Raleway'
+        font-size: 16px
+        width: auto
+        height: 24px
+        padding: 2px 7px 3px 7px
+        display: inline-block
+        border: 1px solid #bdbdbd
+        border-radius: 2px
+        float: right
+        margin-top: 8px
+
+        &:hover
+            color: white
+        a
+            &:hover
+                color: white
+
+.navbar-container
+    // background-color: pink
+    width: 80%
+    height: 40px
+    margin: 0 auto
+
+.stretchbar
+    width: 100%
+    height: 40px
+    background-color: #fff
+    position: absolute
+    top: 250px
+    left: 0
+    box-shadow: 0px 0px 2px 0px lightgrey
+    z-index: 100
+
+.stretchbar-navigation
+    text-align: center
+    a
+        // background-color: transparentize(pink, 0.4)
+        display: inline-block
+        height: 40px
+        width: auto
+        padding: 0 20px 0 10px
+        line-height: 40px
+        font-family: 'Roboto'
+        font-size: 16px
+        color: #6d6d6d
+        &:hover
+            color: black
+
+        img
+            // background-color: lightblue
+            width: 17px
+            height: 36px
+            display: block
+            float: left
+            padding: 0 5px 0 5px
+            display: none
+
+
+// main body
+
+.body-main
+    //background-color: lightblue
+    width: 100%
+    height: auto
+
+.body-container
+    //background-color: white
+    width: $main-width
+    height: auto
+    margin: 0 auto
+    padding-top: 3%
+    padding-bottom: 20%
+    //
+    display: flex
+    justify-content: space-between
+    flex-flow: row wrap
+    align-content: flex-start
+    //
+    border-bottom: 10px solid #f0f0e9
+
+.album-photo
+    width: 100%
+    height: 20%
+    background:
+        position: center
+        repeat: no-repeat
+        size: 100%
+
+.album-title
+    font-family: 'Roboto'
+    color: #464444
+    font-size: 24px
+    padding: 20px 0 20px 20px
+    text-transform: uppercase
+    width: auto
+    height: auto
+    //border-bottom: 10px solid #f0f0e9
+    //background-color: lightblue
+
+.album-info
+    display: block
+    font-family: 'Roboto'
+    width: auto
+    height: auto
+    line-height: 59px
+    font-size: 17px
+    //background-color: pink
+    padding: 0 20px 0 20px
+    &:hover
+        cursor: pointer
+        background-color: #fcfcfc
+
+.album-singles
+    //background-color: lightpink
+    display: table
+    width: 100%
+    height: auto
+    margin-top: 0
+    border-top: 10px solid #f0f0e9
+    padding-top: 20px
+
+    figure
+        width: calc(100% - 40px)
+        height: 50px
+        background-color: #fcfcfc
+        margin: 0px
+        margin-left: 20px
+        margin-right: 20px
+        line-height: 50px
+        border-bottom: 1px solid #e3e3e3
+        border-left: 1px solid #e3e3e3
+        border-right: 1px solid #e3e3e3
+
+        &:nth-of-type(1)
+            border-top: 1px solid #e3e3e3
+            span
+                width: 49px
+                height: 48px
+
+        span
+            margin-right: 20px
+            width: 49px
+            height: 49px
+            //border-radius: 0 100% 100% 0
+            background-color: #f3f3f3
+            display: inline-block
+            background-image: url(../images/icons/right-arrow.svg)
+            background-size: cover
+            float: left
+
+            &:hover
+                cursor: pointer
+                background-color: #faf987
+
+            a
+                display: block
+                width: 49px
+                height: 49px
+                color: transparent
+
+        strong
+            color: #464444
+
+.album-card
+    // background-color: rgba(226, 226, 226, 0.58)
+    width: 240px
+    height: 210px
+    display: inline-block
+    margin: 0px 3% 5% 0px
+    margin-bottom: 50px
+    overflow: hidden
+    position: relative
+    transition: box-shadow 200ms
+    // border: 1px solid lightgrey
+    &:nth-child(4n)
+        margin: 0px 0px 5% 0px
+
+    @media only screen and (max-width: 1335px)
+        margin: 0 2% 5% 0
+    @media only screen and (max-width: 1293px)
+        width: 48%
+
+        margin: 0 2% 7% 0
+        &:nth-child(even)
+            margin: 0 0% 5% 0
+    @media only screen and (max-width: 850px)
+        height: 180px
+    @media only screen and (max-width: 480px)
+        width: 100%
+        height: 170px
+        margin: 0 0 15% 0
+        &:nth-child(even)
+            margin: 0 0 15% 0
+
+.album-card-pic
+    width: auto
+    height: 140px
+    background:
+        color: rgba(0, 0, 0, 0)
+        size: cover
+        repeat: no-repeat
+    background-blend-mode: overlay
+
+    transition: background-blend-mode 200ms, transform 200ms ease-in-out, background-color 200ms
+
+    &:hover
+        transform: scale(1.1)
+        box-shadow: 5px 5px 5px -2px lightgrey
+        cursor: pointer
+        background-color: rgba(0, 0, 0, 0.15)
+        background-blend-mode: overlay
+
+.ac-author
+    font-family: 'Roboto'
+    font-size: 13px
+    color: #6a6a6a
+    // background-color: pink
+    line-height: 30px
+    float: left
+    text-align: left
+    margin-left: 30px
+    width: auto
+
+.album-card-pic-container
+    width: auto
+    height: 140px
+    overflow: hidden
+    // border: 1px solid lightgrey
+    // box-shadow: rgba(black, 0.19) 5px 0px 8px 0
+
+.ac-name
+    // background-color: rgba(255, 234, 0, 0.85)
+    background-color: white
+    position: absolute
+    top: calc(100% - 69px)
+    left: 0
+    width: 100%
+    height: 90px
+    padding: 5px 0px 5px 5px
+
+    span
+        width: 15px
+        height: 15px
+        display: block
+        float: left
+        padding: 5px
+        margin-top: 2px
+        margin-left: -3px
+        background:
+            image: url('../images/icons/right-arrow.svg')
+
+    strong
+        line-height: 30px
+        font-family: 'Roboto'
+        font-size: 16px
+        margin-left: 10px
+        color: #3d3d3d
+
+
+.footer
+    background-color: pink
+    width: 100%
+    height: 70%
+    background-color: #d7d7d7
+
+    @media only screen and (max-width: 700px)
+        height: 100%
+    @media only screen and (max-width: 480px)
+
+.footers
+    width: 33%
+    height: 100%
+    margin-left: 0
+    float: left
+    &:nth-child(even)
+        border-right: 1px solid #b9b9b9
+        border-left: 1px solid #b9b9b9
+
+    @media only screen and (max-width: 700px)
+        width: 100%
+        height: auto
+        background-color: #d7d7d7
+        &:nth-child(even)
+            border-right: none
+            border-left: none
+        &:nth-child(3)
+            padding-bottom: 100px
+
+.footers.sec-1
+    // background-color: transparentize(pink, $amount)
+
+
+.logo
+    text-align: center
+    height: auto
+    color: #484848
+    h1
+        font-size: 72px
+        font-family: 'Lobster'
+        margin-top: 10%
+        margin-bottom: 5%
+        text-decoration: underline
+        // background-color: lightblue
+    p
+        font-size: 20px
+        font-family: 'Roboto'
+        width: 60%
+        display: block
+        margin: 0 auto
+
+.related-photos
+    // background-color: pink
+    width: 100%
+    height: auto
+    color: #484848
+    h1
+        font-family: 'Roboto'
+        text-align: center
+        margin-top: 10%
+        margin-bottom: 5%
+        padding-top: 2%
+
+
+.photos
+    // background-color: lightblue
+    width: 70%
+    height: auto
+    margin: 0 auto
+    span
+        width: 100px
+        height: 95px
+        display: inline-block
+        background-color: #b6b6b6
+        // float: left
+        margin-left: 5px
+        margin-bottom: 5px
+        &:nth-child(1)
+            width: 200px
+            height: 200px
+            margin: 0
+            margin-right: 2px
+            display: inline-block
+            float: left
+
+    @media only screen and (max-width: 1345px)
+        span
+            width: 50%
+            margin-left: 0px
+            margin-bottom: 0px
+            display: block
+            float: left
+            padding: 0
+            // background-color: pink
+            &:nth-child(3)
+                width: 49%
+                margin-left: 1%
+
+            &:nth-child(1)
+                // background-color: grey
+                width: 100%
+                height: 150px
+                display: block
+                margin-bottom: 1%
+
+
+.foot-contact
+    width: 100%
+    height: auto
+    color: #484848
+    // background-color: pink
+    h1
+        font-family: 'Roboto'
+        text-align: center
+        margin-top: 10%
+        margin-bottom: 5%
+        padding-top: 2%
+
+.contact-field
+    width: 70%
+    height: 200px
+    background-color: #b6b6b6
+    margin: 0 auto

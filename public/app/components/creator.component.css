@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+
+.body-container {
+    /*background-color: pink;*/
+    height: auto;
+    min-height: 100%;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+.album-creator-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 3% 0 3% 0;
+}
+
+.album-creator-logo h2 {
+    font-family: Roboto;
+    font-size: 29px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.album-creator-header {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    /*background-color: lightblue;*/
+    /*padding-top: 5%;*/
+}
+
+.album-creator-imager {
+    display: block;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.58);
+    /*background-color: #00ACED;*/
+    border-radius: 2px 0 0 2px;
+    /* transitions */
+    transition: background-color 2s;
+    overflow: hidden;
+}
+
+.album-image {
+    z-index: -1;
+    display: block;
+    height: 200%;
+    border: none;
+    text-indent: 100vw;
+}
+
+.album-creator-imager-inp {
+    z-index: 0;
+    position: relative;
+    top: -200%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    -webkit-transition: background-color 0.4s cubic-bezier(0.7, 0.5, 0.58, 1);
+    transition: background-color 0.4s cubic-bezier(0.7, 0.5, 0.58, 1);
+}
+
+.album-creator-imager-inp:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.album-creator-imager span {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 17px;
+    color: #cacaca;
+    text-align: center;
+    position: relative;
+    top: calc(50% - 9px);
+    /*background-color: rgba(255, 192, 203, 0.64);*/
+}
+
+.album-creator-imager-inp label {
+    display: block;
+    width: 70px;
+    height: 70px;
+    padding: 2px 5px;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    top: calc(50% - 35px)
+}
+
+.album-creator-imager-inp label:hover {
+    cursor: pointer;
+}
+
+#alCreatorImgInput {
+    display: none;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+img {
+    outline: none;
+}
+
+
+.album-creator-header input {
+    width: 100%;
+    height: 27px;
+    font-family: Roboto;
+    color: black;
+    font-size: 27px;
+    border: none;
+    border-bottom: 2px solid #e8e6e6;
+    margin-bottom: 5px;
+    padding: 3% 2%;
+    border-radius: 0 2px 2px 0;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.58);
+}
+
+.album-creator-header input:focus {
+    box-shadow: 0px 6px 20px -6px #c2c2c2;
+}
+
+.album-creator-header textarea {
+    width: 100%;
+    height: 20%;
+    font-family: Roboto;
+    color: black;
+    font-size: 18px;
+    border: none;
+    /*border: 1px solid #cacaca;*/
+    padding: 1% 2%;
+    border-radius: 0 2px 2px 0;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.album-creator-header textarea:focus {
+    box-shadow: 0px 6px 20px -5px #c2c2c2;
+}
+
+input[placeholder] {
+    color: black;
+}
+::-webkit-input-placeholder {
+    color: #d1d1d1;
+    font-weight: 300;
+}
+
+.album-creator-body {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 20%;
+    background-color: white;
+    float: left;
+    padding-top: 1%;
+    /**/
+    border-bottom: 1px solid #dedede;
+    -webkit-box-shadow: 0px 2px 9px -4px #a6a6a6;
+    -moz-box-shadow: 0px 2px 9px -4px #a6a6a6;
+    box-shadow: 0px 2px 9px -4px #a6a6a6;
+}
+
+.input-span {
+    width: 96%;
+    margin: 0 2% 0 2%;
+    height: 40px;
+    display: block;
+    /*background-color: rgba(107, 107, 107, 0.13);*/
+    /**/
+    margin-bottom: 1%;
+    -webkit-border-radius: 0 50% 50% 0;
+    -moz-border-radius: 0 50% 50% 0;
+    border-radius: 0 40px 40px 0;
+}
+
+.input-span:hover {
+    background-color: rgba(255, 244, 0, 0.13);
+}
+
+.input-label {
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    float: left;
+    margin-right: 1%;
+    background-color: #fff743;
+    border: 1px solid #f2db1a;
+}
+
+.input-label:hover {
+    cursor: pointer;
+    background-color: #f4e52b;
+}
+
+.input-label:after {
+    content: 'Browse';
+    line-height: 40px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+    width: auto;
+    height: auto;
+}
+
+.input-file {
+    display: none;
+}
+
+.input-strong {
+    line-height: 40px;
+    padding-left: 1%;
+    border-left: 1px solid #cacaca;
+    /* fonts */
+    font-family: 'Roboto';
+    font-weight: 400;
+    display: inline-block;
+    white-space: nowrap;
+    width: 70%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.input-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    /*border: 1px solid #cacaca;*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    /**/
+    color: #c5c5c5;
+    float: right;
+    /*display: none;*/
+}
+
+.input-button:hover {
+    color: #282828;
+}
+
+
+.creator-submit {
+    width: 110px;
+    height: 35px;
+    display: block;
+    float: right;
+}
+
+.creator-submit button {
+    background-color: white;
+    border: none;
+    /*border-right: 1px solid #dedede;*/
+    border-bottom: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    margin-top: -1px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 17px;
+    color: #3d3d3d;
+    /**/
+    -webkit-box-shadow: 0px 2px 9px -4px #a6a6a6;
+    -moz-box-shadow: 0px 2px 9px -4px #a6a6a6;
+    box-shadow: 0px 2px 9px -4px #a6a6a6;
+}
